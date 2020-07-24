@@ -1,0 +1,349 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <style>
+        #clickme,#clickme2
+        {
+            width: 180px;
+            background-color:blue;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 23px;
+            border: none;
+            padding: 10px;
+        }
+        #reset,#reset2
+        {
+            width: 180px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 23px;
+            border: none;
+            padding: 10px; 
+        }
+        .container1,.container5
+        {
+            width: 75%;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .flexboxcontainer1,.flexboxcontainer3,.flexboxcontainer2,.flexboxcontainer4
+        {
+            display: flex;
+            border: 1px solid black;
+            padding: 10px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .flexboxcontainer1 div
+        {
+            
+            display: flex;
+            padding: 10px;
+            border: 1px solid black; 
+            align-items: center;
+        }
+        h1
+        {
+           font-size: 60px;
+        }
+        .flexboxcontainer2 img
+        {
+            margin: 10px;
+            box-shadow: 0px 10px 50px rgba(0,0,0,7);
+        }
+        .flexboxcontainer3 div
+        {
+            display: flex;
+            /* padding: 10px;  */
+            align-items: center;
+
+        }
+        .flexboxcontainer3 button
+        {
+            border: none;
+            /* box-shadow: 0px 10px 50px rgba(0,0,0,7); */
+        }
+        .flexboxcontainer3 img:hover
+        {
+            box-shadow: 0px 10px 50px rgb(4, 11, 112,1);
+        }
+        .container1 h3
+        {
+            font-size:30px;
+        }
+        .buttoncontainer
+        {
+            border: 1 px solid black;
+            align-items: center;
+            margin:20px 0;
+        }
+        #playagain
+        {
+            width: 180px;
+            background-color:blue;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 23px;
+            border: none;
+            padding: 10px;
+
+        }
+        #button1
+        {
+            width: 140px;
+            background-color:blue;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 23px;
+            border: none;
+        }
+        #button2
+        {
+            width: 140px;
+            background-color:green;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 23px;
+            border: none;
+        }
+        #button3
+        {
+            width: 140px;
+            background-color:red;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 23px;
+            border: none;
+        }
+        #button4
+        {
+            width: 140px;
+            background-color:yellow;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 23px;
+            border: none;
+        }
+        #colorid
+        {
+            background-color: lightgray;
+            font-size: 15px;
+            padding: 10px;
+        }
+        .flexboxcontainer4 button
+        {
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 23px;
+            border: none;
+            padding: 10px;
+            margin: 0 5px;
+        }
+        #hit
+        {
+            width: 70px;
+            background-color: blue;
+        }
+        #stand
+        {
+            width: 80px;
+            background-color:orange;
+        }
+        #deal
+        {
+            width: 70px;
+            background-color: red;
+        }
+        .flexboxcontainer4 div
+        {
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .flexboxcontainer4
+        {
+            background-color: rgb(5, 59, 5);
+        }
+        table
+        {
+            margin: 0;
+            border:  1px solid white; 
+        }
+        table span
+        {
+            text-align: center;
+        }
+        th,td
+        {
+            color: white;
+            text-align: center;
+            margin: 0;
+           padding: 5px;
+           border:  1px solid white;;
+        }
+        .resultstable table
+        {
+            margin: 20px auto;
+        }
+        .playarena
+        {
+            display: flex;
+            height: 450px;
+            background-color: rgb(5, 59, 5) ;
+            border-style:ridge;
+        }
+        .box
+        {
+            flex:1;
+            font-size: 25px;
+            text-align: center;
+            color: white;
+            border: 1px solid black;
+        }
+        .box h3
+        {
+            margin: 2px auto;
+        }
+        .container5
+        {
+            color: white;
+            background-color:rgb(5, 59, 5) ;
+        }
+        .imageflexbox
+        {
+            border: none;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .imageflexbox img
+        {
+            width: 100px;
+            height: 140px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+ <div class="container1">
+    <h1>Challenge 1:Your Age in Days</h1>
+    <div class="flexboxcontainer1">
+      <div>
+           <button id='clickme' onclick="ageindays()">Click me</button>
+      </div>
+       <div>
+           <button id='reset' onclick="reset()">Reset</button>
+      </div>
+    </div>
+    <div class="flexboxcontainer1">
+        <div id="flexboxresult"></div>
+    </div>
+ </div>
+ <div class="container1">
+     <h1>Challenge 2:Cat Generator</h1>
+     <div class="flexboxcontainer1" >
+         <div>
+            <button id="clickme2" onclick="catgenerate()">Generate Cat</button>
+         </div>
+         <div>
+            <button id="reset2" onclick="catreset()">Remove cat</button>
+         </div>
+     </div>
+     <div class="flexboxcontainer2" id="flexboxcontainer2">
+     </div>
+ </div>
+ <div class="container1" id="rock,paper,scissor">
+     <h1>Challenge 3:Rock,Paper,Scissors</h1>
+     <div id="let's play">
+        <h3 id="label2">Let's Play </h3>
+     </div>
+     
+     <div class="flexboxcontainer3" id="flexbox">
+         <div id="Rock">
+            <img src="Images\Rock,Paper,Scissors\Rock.jpeg"  id='rock' alt="Rock" height="200px" width="200px" onclick="rpsgame(this)">
+         </div>
+         <div id="Paper">
+            <img src="Images\Rock,Paper,Scissors\Paper.png" id='paper' alt="Paper" height="200px" width="200px" onclick="rpsgame(this)">
+         </div>
+         <div id="Scissor">
+            <img src="Images\Rock,Paper,Scissors\Scissor.jpeg" id="scissor" alt="Scissor" height="200px" width="200px" onclick="rpsgame(this)">
+         </div>
+     </div>
+     <div class="buttoncontainer">
+        <button id="playagain"  onclick="playagain()">Play Again</button>
+     </div>   
+ </div>
+ <div class="container1">
+     <h1>Challenge 4:Change the Color of All Buttons</h1>
+     <div class="flexboxcontainer1">
+             <form action="">
+                <select name="colorselector" id="colorid" onchange="buttoncolorchange(this)">
+                    <option value="random">Random</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="reset">Blue</option>
+                </select>
+             </form>
+            <button id='button1' >Google!!!</button>
+            <button id='button2'>Yahoo!!!</button>
+            <button id='button3'>Instagram!!!</button>
+            <button id='button4'>Facebook!!!</button>
+     </div>
+ </div>
+ <div class="container5">
+    <div id="letsplay">
+        <h1>Challenge 5:Blackjack</h1>
+       <h3 id="blackjacklabel" style="font-size: 40px;">Let's Play </h3>
+    </div>
+    <div class="playarena">
+        <div class="box">
+            <h2>You: <span id="yourscore">0</span></h2>
+            <div class="imageflexbox" id="mybox">
+            </div>
+        </div>
+        
+        <div class="box">
+            <h2>Dealer: <span id="dealerscore">0</span></h2>
+            <div class="imageflexbox" id="dealerbox">
+            </div>
+        </div>
+    </div>
+    <div class="flexboxcontainer4">
+        <div id="buttoncontainer">
+            <button id="hit">Hit</button>
+            <button id="stand">Stand</button>
+            <button id="deal">Deal</button>
+        </div>
+    </div>
+    <div class="resultstable">
+        <table>
+            <tr>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Draws</th>
+            </tr>
+            <tr>
+                <td><span id="wins">0</span></td>
+                <td><span id="loses">0</span></td>
+                <td><span id="draws">0</span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+ <script src="INDEX.JS"> </script>
+</body>
+</html>
